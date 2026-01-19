@@ -75,7 +75,7 @@ export default function ProductList() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {products.map((p) => (
               <div
-                key={p.id}
+                key={p._id}
                 className="rounded-2xl bg-white shadow-lg hover:shadow-2xl transition overflow-hidden"
               >
                 {/* Fake Image */}
@@ -100,7 +100,7 @@ export default function ProductList() {
                   {/* Actions */}
                   <div className="mt-5 flex gap-2">
                     <Link
-                      href={`/product/${p.id}`}
+                      href={`/product/${p._id}`}
                       className="flex-1 text-center px-4 py-2 rounded-lg
                         bg-blue-100 text-blue-700
                         hover:bg-blue-200 transition"
@@ -109,7 +109,7 @@ export default function ProductList() {
                     </Link>
 
                     <button
-                      onClick={() => handleDelete(p.id)}
+                      onClick={() => handleDelete(Number(p._id))}
                       className="flex-1 px-4 py-2 rounded-lg
                         bg-red-100 text-red-700
                         hover:bg-red-200 transition"
