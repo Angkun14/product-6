@@ -1,11 +1,7 @@
-export interface Product { 
-
-  _id: string; 
-
-  name: string; 
-
-  price: number; 
-
-  description: string; 
-
-} 
+export interface Product {
+  _id: string;        // 👈 ต้องเป็น string
+  name: string;
+  price: number;
+  colors: string[];
+  description: string;
+}
